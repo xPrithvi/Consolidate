@@ -1,0 +1,121 @@
+Screen:
+	id: scr
+	
+    NavigationLayout:
+	
+        ScreenManager:
+			id: screen_manager
+			
+            Screen:
+				name: "HomeScreen"
+                AnchorLayout:
+					anchor_x: 'center'
+					anchor_y: 'top'
+                    MDToolbar:
+                        title: "Consolidate: Mind Management"
+						md_bg_color: app.theme_cls.primary_dark
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+						
+			Screen:
+				name: "SettingsScreen"
+                AnchorLayout:
+					anchor_x: 'center'
+					anchor_y: 'top'
+                    MDToolbar:
+                        title: "Settings"
+						md_bg_color: app.theme_cls.primary_dark
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+						
+						
+			Screen:
+				name: "MoodScreen"
+                AnchorLayout:
+					anchor_x: 'center'
+					anchor_y: 'top'
+                    MDToolbar:
+                        title: "Mood Tracker"
+						md_bg_color: app.theme_cls.primary_dark
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+
+			Screen:
+				name: "SleepScreen"
+                AnchorLayout:
+					anchor_x: 'center'
+					anchor_y: 'top'
+                    MDToolbar:
+                        title: "Sleep Tracker"
+						md_bg_color: app.theme_cls.primary_dark
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+						
+			Screen:
+				name: "JournalScreen"
+                AnchorLayout:
+					anchor_x: 'center'
+					anchor_y: 'top'
+                    MDToolbar:
+                        title: "My Journal"
+						md_bg_color: app.theme_cls.primary_dark
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+						
+						
+			Screen:
+				name: "PersonalityScreen"
+                AnchorLayout:
+					anchor_x: 'center'
+					anchor_y: 'top'
+                    MDToolbar:
+                        title: "My Personality"
+						md_bg_color: app.theme_cls.primary_dark
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+
+			Screen:
+				name: "TestsScreen"
+                AnchorLayout:
+					anchor_x: 'center'
+					anchor_y: 'top'
+                    MDToolbar:
+                        title: "Depression & Anxiety"
+						md_bg_color: app.theme_cls.primary_dark
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+
+                    Widget:
+
+        MDNavigationDrawer:
+			id: nav_drawer
+
+            ContentNavigationDrawer:
+				id: content_drawer
+
+<ItemDrawer>:
+    theme_text_color: "Custom"
+    on_release:
+		self.parent.set_color_item(self)
+
+    IconLeftWidget:
+        id: icon
+        icon: root.icon
+        theme_text_color: "Custom"
+        text_color: root.text_color
+
+<ContentNavigationDrawer>:
+    orientation: "vertical"
+    padding: "0dp"
+    spacing: "0dp"
+	
+	BoxLayout:
+        id: top_box
+        size_hint_y: None
+        height: "250dp"
+
+        FitImage:
+            source: f"assets/Wallpaper.png"
+
+    ScrollView:
+
+        DrawerList:
+            id: md_list
+			
+	MDLabel:
+		text: "Created by Prithvi Ramrucha."
+		size_hint_y: None
+		height: self.texture_size[1]
