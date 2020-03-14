@@ -1,1 +1,3 @@
-# Consolidate
+# Consolidate: Mind Management 
+
+Work in progress.
