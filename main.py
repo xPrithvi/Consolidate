@@ -3,12 +3,15 @@ from kivymd.app import MDApp
 from kivymd.theming import ThemableBehavior
 from kivymd.uix.toolbar import MDToolbar
 from kivymd.uix.button import MDIconButton
+from kivymd.uix.label import MDLabel
 from kivymd.uix.list import OneLineIconListItem, MDList
 from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.widget import Widget
 from kivy.lang import Builder
+import ConsolidateWallpaper
 
-class Application(MDApp):
+class ConsolidateApp(MDApp):
     """KivyMD framework is inherited by our Application class."""
 
     def build(self):
@@ -48,6 +51,10 @@ class Application(MDApp):
                        icon="weather-lightning-rainy",
                        on_release=self.openScreen))
         self.root.ids.content_drawer.ids.md_list.add_widget(
+            ItemDrawer(target="InfoScreen", text="Info",
+                       icon="information",
+                       on_release=self.openScreen))
+        self.root.ids.content_drawer.ids.md_list.add_widget(
             ItemDrawer(target="SettingsScreen", text="Settings",
                        icon="settings-outline",
                        on_release=self.openScreen))
@@ -71,4 +78,5 @@ class DrawerList(ThemableBehavior, MDList):
 
 "Algorithm execution."
 if __name__ == "__main__":
-    Application().run()
+    ConsolidateWallpaper.Wallpaper().select_wallpaper()
+    ConsolidateApp().run()
