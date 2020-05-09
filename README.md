@@ -4,7 +4,7 @@ Students today are more likely to suffer from depression and anxiety due to a co
 
 ### Features
 
-- **Mood tracker. **Keeping track of our daily mood enables us to understand our emotions more effectively. We learn precisely which combinations of actions, events and people lead us to feel a certain way.
+- **Mood tracker.** Keeping track of our daily mood enables us to understand our emotions more effectively. We learn precisely which combinations of actions, events and people lead us to feel a certain way.
 
 - **Sleep tracker.** The vast majority of students fail to get a full eight hours of sleep. Most likely, this leads to an irregular sleep cycle that has been proven to be both physically and mentally damaging. Sleep tracking encourages a regular sleep schedule that encourages a better state of health.
 
